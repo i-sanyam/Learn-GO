@@ -2,8 +2,9 @@ package main
 
 func main() {
 	// create a new deck and print it
-	// cards := newDeck()
-	// cards.print()
+	cards := newDeck()
+	cards.shuffle();
+	cards.print()
 
 
 	// hand, remainingCards := deal(cards, 5)
@@ -16,6 +17,6 @@ func main() {
 
 	// read deck from a file
 	// cards := readDeckFromFile("cards1.txt") // test error
-	cards := readDeckFromFile("cards1.txt")
-	cards.print()
+	// cards := readDeckFromFile("cards1.txt")
+	// cards.print()
 }
