@@ -5,7 +5,10 @@ import "fmt"
 func main() {
 	cards := []string{newCard(), newCard(), "Six of Clubs"}
 	cards = append(cards, "Two of Spades")
-	fmt.Println(cards)
+	
+	for i, card := range cards {
+		fmt.Println(i, card);
+	}
 }
 
 func newCard() string {
