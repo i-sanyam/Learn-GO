@@ -5,7 +5,3 @@ func main() {
 
 	cards.print()
 }
-
-func newCard() string {
-	return "Seven of Hearts"
-}
