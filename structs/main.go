@@ -8,9 +8,9 @@ type contactInfo struct {
 }
 
 type person struct {
-	firstName   string
-	lastName    string
-	age         int
+	firstName string
+	lastName  string
+	age       int
 	contactInfo
 }
 
@@ -35,8 +35,13 @@ func main() {
 		},
 	}
 	fmt.Println(tany)
-	tany.firstName = "Tany"
+	tanyPointer := &tany
+	tanyPointer.updateFirstName("Tany")
 	tany.print()
+}
+
+func (pointerToPerson *person) updateFirstName(nameToUpdate string) {
+	(*pointerToPerson).firstName = nameToUpdate
 }
 
 func (p person) print() {
