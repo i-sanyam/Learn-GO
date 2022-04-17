@@ -35,8 +35,7 @@ func main() {
 		},
 	}
 	fmt.Println(tany)
-	tanyPointer := &tany
-	tanyPointer.updateFirstName("Tany")
+	tany.updateFirstName("Tany")
 	tany.print()
 }
 
