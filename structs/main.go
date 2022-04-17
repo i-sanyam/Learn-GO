@@ -8,10 +8,10 @@ type contactInfo struct {
 }
 
 type person struct {
-	firstName string
-	lastName  string
-	age       int
-	contact   contactInfo
+	firstName   string
+	lastName    string
+	age         int
+	contactInfo contactInfo
 }
 
 func main() {
@@ -20,8 +20,8 @@ func main() {
 	alex.firstName = "alex"
 	alex.lastName = "anderson"
 	alex.age = 30
-	alex.contact.email = "alex@mail.com"
-	alex.contact.pincode = 14120
+	alex.contactInfo.email = "alex@mail.com"
+	alex.contactInfo.pincode = 14120
 	fmt.Println(alex)
 	sam := person{"Sam", "Dane", 21, contactInfo{"sam@mail.com", 14001}}
 	fmt.Println(sam)
@@ -29,7 +29,7 @@ func main() {
 		firstName: "Tanny",
 		lastName:  "Tense",
 		age:       24,
-		contact: contactInfo{
+		contactInfo: contactInfo{
 			email:   "tanny@mail.com",
 			pincode: 13001,
 		},
