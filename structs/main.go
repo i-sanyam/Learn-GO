@@ -16,7 +16,7 @@ type person struct {
 
 func main() {
 	var alex person
-	fmt.Printf("%+v", alex)
+	alex.print()
 	alex.firstName = "alex"
 	alex.lastName = "anderson"
 	alex.age = 30
@@ -36,5 +36,9 @@ func main() {
 	}
 	fmt.Println(tany)
 	tany.firstName = "Tany"
-	fmt.Printf("%+v", tany)
+	tany.print()
+}
+
+func (p person) print() {
+	fmt.Printf("%+v", p)
 }
