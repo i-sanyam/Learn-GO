@@ -2,10 +2,16 @@ package main
 
 import "fmt"
 
+type contactInfo struct {
+	email   string
+	pincode int
+}
+
 type person struct {
 	firstName string
 	lastName  string
 	age       int
+	contact   contactInfo
 }
 
 func main() {
@@ -14,11 +20,21 @@ func main() {
 	alex.firstName = "alex"
 	alex.lastName = "anderson"
 	alex.age = 30
+	alex.contact.email = "alex@mail.com"
+	alex.contact.pincode = 14120
 	fmt.Println(alex)
-	sam := person{"Sam", "Dane", 21}
+	sam := person{"Sam", "Dane", 21, contactInfo{"sam@mail.com", 14001}}
 	fmt.Println(sam)
-	tany := person{firstName: "Tanny", lastName: "Tense", age: 24}
+	tany := person{
+		firstName: "Tanny",
+		lastName:  "Tense",
+		age:       24,
+		contact: contactInfo{
+			email:   "tanny@mail.com",
+			pincode: 13001,
+		},
+	}
 	fmt.Println(tany)
 	tany.firstName = "Tany"
-	fmt.Println(tany)
+	fmt.Printf("%+v", tany)
 }
