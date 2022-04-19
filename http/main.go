@@ -7,10 +7,13 @@ import (
 )
 
 func main() {
-	resp, err := http.Get("https://www.google.com");
-	if (err != nil) {
-		fmt.Println("Error in API Call", err);
-		os.Exit(1);
+	resp, err := http.Get("https://www.google.com")
+	if err != nil {
+		fmt.Println("Error in API Call", err)
+		os.Exit(1)
 	}
-	fmt.Println("Response from API Call\n", resp);
+	bs := make([]byte, 99999)
+	resp.Body.Read(bs)
+	fmt.Println("\nResponse from API Call\n", resp)
+	fmt.Println("\nResponse Body\n", string(bs))
 }
